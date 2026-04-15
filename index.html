@@ -27,7 +27,7 @@
       --grey-800: #1a1a1a;
       --grey-900: #111111;
       --black: #080808;
-      --accent: #d4a853;
+      --accent: #ce3410;
       --accent-dim: rgba(212, 168, 83, 0.15);
       --font-main: 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       --font-body: 'Inter', -apple-system, sans-serif;
@@ -148,6 +148,27 @@
       color: var(--white);
     }
 
+    .nav-socials {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-socials a {
+      color: var(--grey-400);
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-socials a:hover {
+      color: var(--white);
+    }
+
+    .nav-socials svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
 
     /* ── Hero Section ── */
     .hero {
@@ -249,6 +270,10 @@
       justify-content: space-between;
       align-items: baseline;
       margin-bottom: 3rem;
+    }
+
+    #about .section-header {
+      justify-content: center;
     }
 
     .section-title {
@@ -355,8 +380,8 @@
       position: relative;
       width: 100%;
       height: 0;
-      padding-bottom: 41.84%;
-      max-height: 400px;
+      padding-bottom: 20.92%;
+      max-height: 200px;
       overflow: hidden;
     }
 
@@ -379,6 +404,8 @@
     /* ── About Section ── */
     .about-text {
       max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .about-text p {
@@ -392,6 +419,7 @@
 
     .about-stats {
       display: flex;
+      justify-content: center;
       gap: 4rem;
       margin-top: 3rem;
       padding-top: 2rem;
@@ -650,15 +678,23 @@
   <nav>
     <a href="#" class="nav-logo">Darbaar</a>
     <ul class="nav-links">
-      <li><a href="#music">Music</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#music">Releases</a></li>
     </ul>
+    <div class="nav-socials">
+      <a href="https://www.instagram.com/darbaar.world/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="https://soundcloud.com/darbaar-world" target="_blank" rel="noopener" aria-label="SoundCloud">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.56 8.87V17h8.76c1.85-.13 2.68-1.27 2.68-2.5 0-1.65-1.34-3-3-3-.23 0-.45.03-.67.08C18.95 9.2 16.86 7.5 14.36 7.5c-1.05 0-2.03.36-2.8.97v.4zM10.36 9.91c-.31-.22-.7-.36-1.14-.36-1.1 0-2 .89-2 2v5.81h2V9.91h1.14zM6.22 12.17c-.2-.1-.43-.17-.67-.17-.55 0-1.03.32-1.26.78v4.58h1.93v-5.19zM3.29 13.44c-.12-.05-.25-.08-.38-.08-.35 0-.66.16-.87.41v3.59h1.25v-3.92zM1.04 14.13c-.07-.02-.14-.03-.22-.03-.26 0-.49.12-.65.31V17h.87v-2.87z"/></svg>
+      </a>
+    </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg" id="heroBg">
-      <img src="images/hero/cover-01.jpg" alt="Darbaar" class="hero-bg-img" id="heroBgImg">
+      <img src="images/hero/cover-03.jpg" alt="Darbaar" class="hero-bg-img" id="heroBgImg">
     </div>
     <div class="hero-content">
       <p class="hero-tagline">A gathering of sound, culture &amp; spiritual rhythm</p>
@@ -666,7 +702,36 @@
     </div>
   </section>
 
-  <!-- Music -->
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-text">
+        <p>Darbaar is a New York–based record label focused on house and techno with a distinct cultural identity.</p>
+        <p>Blending South Asian rhythmic influence with modern electronic production, Darbaar creates music that is percussive, hypnotic, and deeply immersive.</p>
+        <p>At its core, Darbaar is a gathering — a space where sound, culture, and energy converge on the dancefloor.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-value">NYC</span>
+          <span class="stat-label">Based In</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">2026</span>
+          <span class="stat-label">Founded</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Panel A -->
+  <div class="parallax-panel" id="parallaxPanel">
+    <div class="parallax-panel-bg"></div>
+  </div>
+
+  <!-- Releases -->
   <section class="section" id="music">
     <div class="section-inner">
       <div class="section-header">
@@ -706,35 +771,12 @@
     </div>
   </section>
 
-  <!-- Parallax Panel (visible in state 2 only) -->
-  <div class="parallax-panel" id="parallaxPanel">
-    <div class="parallax-panel-bg"></div>
-  </div>
-
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="section-inner">
-      <div class="section-header">
-        <h2 class="section-title">About</h2>
-      </div>
-      <div class="about-text">
-        <p>Darbaar is a record label rooted in house and techno, drawing from cultural and spiritual sonic traditions. Based in New York City, we exist at the intersection of modern electronic production and ancient rhythm.</p>
-        <p>The name means "gathering" — a space where sound, culture, and spiritual energy converge.</p>
-      </div>
-      <div class="about-stats">
-        <div class="stat">
-          <span class="stat-value">NYC</span>
-          <span class="stat-label">Based In</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">2026</span>
-          <span class="stat-label">Founded</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- TODO: Add contact section here -->
+
+  <!-- Footer Parallax Panel -->
+  <div class="parallax-panel parallax-panel-footer">
+    <div class="parallax-panel-bg" style="background-image: url('images/hero/cover-05.jpg');"></div>
+  </div>
 
   <!-- Footer -->
   <footer>
