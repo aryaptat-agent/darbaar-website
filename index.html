@@ -7,7 +7,7 @@
   <meta name="description" content="Darbaar — A gathering of sound, culture & spiritual rhythm. Coming soon.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <style>
     @font-face {
@@ -17,12 +17,6 @@
       font-weight: normal;
       font-style: normal;
       font-display: swap;
-    }
-
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
     :root {
@@ -35,7 +29,7 @@
       --black: #080808;
       --accent: #d4a853;
       --accent-dim: rgba(212, 168, 83, 0.15);
-      --font-main: 'Space Grotesk', -apple-system, sans-serif;
+      --font-main: 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       --font-body: 'Inter', -apple-system, sans-serif;
     }
 
@@ -218,13 +212,13 @@
     .hero-badge {
       display: inline-block;
       font-family: var(--font-main);
-      font-weight: 500;
-      font-size: 0.7rem;
-      letter-spacing: 0.4em;
+      font-weight: 400;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--accent);
-      border: 1px solid var(--accent-dim);
-      padding: 0.75em 2.5em;
+      border: none;
+      padding: 0;
       opacity: 0;
       animation: fadeUp 1s ease 0.6s forwards;
     }
@@ -558,8 +552,10 @@
         width: 100%;
         height: 0;
         padding-bottom: 41.84%;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position: center;
+        background-color: var(--black);
         inset: auto;
       }
 
@@ -585,6 +581,8 @@
       #music .section-header {
         padding: 0 1rem;
         margin-bottom: 1rem;
+        text-align: center;
+        align-items: center;
       }
 
       .music-grid {
@@ -607,6 +605,19 @@
         background-attachment: scroll;
         background-image: url('images/hero/panel-bg-wide.png');
         inset: 0;
+      }
+
+      #about .section-header {
+        text-align: center;
+      }
+
+      .about-text {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .about-stats {
+        justify-content: center;
       }
     }
 
