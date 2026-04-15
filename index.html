@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <style>
     @font-face {
       font-family: 'Angela';
@@ -38,11 +39,20 @@
       --font-body: 'Inter', -apple-system, sans-serif;
     }
 
+    /* ── Pico CSS Overrides ── */
+    :root[data-theme="dark"] {
+      --pico-background-color: var(--black);
+      --pico-color: var(--white);
+      --pico-font-family: var(--font-body);
+      --pico-font-size: 16px;
+    }
+
     html {
       font-size: 16px;
       scroll-behavior: smooth;
       overflow-x: hidden;
       max-width: 100vw;
+      background: var(--black);
     }
 
     body {
@@ -53,6 +63,44 @@
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
       max-width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Reset Pico's container/section/article defaults */
+    section, footer, nav, header {
+      padding: unset;
+      margin: unset;
+      max-width: unset;
+      container-type: unset;
+    }
+
+    /* Reset Pico's link styling */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Reset Pico heading styles */
+    h1, h2, h3, h4, h5, h6 {
+      --pico-font-family: var(--font-main);
+      margin: 0;
+    }
+
+    /* Reset Pico list styles */
+    ul, ol {
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Reset Pico paragraph spacing */
+    p {
+      margin-bottom: 0;
     }
 
     /* ── Navigation ── */
@@ -453,10 +501,6 @@
         font-size: 0.7rem;
       }
 
-      .section {
-        padding: 4rem 1.5rem;
-      }
-
       .section-header {
         flex-direction: column;
         gap: 0.5rem;
@@ -465,6 +509,7 @@
       .music-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2px;
+        max-width: 100%;
       }
 
       .about-stats {
@@ -488,10 +533,32 @@
 
       .hero-bg {
         inset: 0;
+        background-size: contain;
+        background-position: center center;
+        background-color: var(--black);
+      }
+
+      .section {
+        padding: 4rem 1rem;
       }
 
       #music .section-inner {
         max-width: 100%;
+        padding: 0;
+      }
+
+      .music-grid {
+        max-width: 100%;
+      }
+
+      .music-placeholder {
+        min-height: auto;
+        aspect-ratio: 1;
+      }
+
+      .music-placeholder .overlay span {
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
       }
 
       .parallax-panel-bg {
