@@ -531,29 +531,53 @@
         gap: 1.5rem;
       }
 
+      .hero {
+        height: auto;
+        min-height: 0;
+      }
+
       .hero-bg {
-        inset: 0;
-        background-size: contain;
-        background-position: center center;
-        background-color: var(--black);
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 66.67%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-content {
+        position: relative;
+        padding: 1.5rem 1.5rem 2.5rem;
       }
 
       .section {
         padding: 4rem 1rem;
       }
 
+      #music {
+        padding: 2rem 0;
+      }
+
       #music .section-inner {
         max-width: 100%;
         padding: 0;
+        margin: 0;
+      }
+
+      #music .section-header {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
       }
 
       .music-grid {
         max-width: 100%;
+        gap: 2px;
       }
 
       .music-placeholder {
         min-height: auto;
         aspect-ratio: 1;
+        border-radius: 0;
       }
 
       .music-placeholder .overlay span {
